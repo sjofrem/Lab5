@@ -4,7 +4,13 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of Lab5 is to ...
+The goal of Lab5 is to be a R wrapper for the Kolada API.
+Kolada is an open data service from Sweden that provides public statistics about municipalities and regions.
+The API lets you query things like:
+Population data
+Employment rates
+Education levels
+Municipality info
 
 ## Installation
 

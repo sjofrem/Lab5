@@ -28,7 +28,7 @@ information.
 If you have the repository locally, you can load it with:
 
 ```{r setup}
-devtools::install()
+# devtools::install()
 library(Lab5)
 ```
 

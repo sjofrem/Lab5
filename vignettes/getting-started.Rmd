@@ -14,6 +14,65 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+## Introduction
+
+The Lab5 package is a lightweight R wrapper around the `[Kolada API](https://www.kolada.se)`,
+which provides open data on Swedish municipalities and 
+organizations. This vignette demonstrates how to use the package to fetch KPIs
+(Key Performance Indicators), municipality data, and organizational unit (OU) 
+information.
+
+## Install and load the package
+
+If you have the repository locally, you can load it with:
+
 ```{r setup}
+devtools::install()
 library(Lab5)
 ```
+
+
+## Fetch KPIs
+
+You can search for KPIs by title. For example, KPIs related to schools:
+
+```{r}
+res <- kpi(title = "skola", per_page = 5)
+res$values
+```
+
+
+## Municipality Information
+
+Each municipality in Sweden has an ID.
+For example, Stockholm has ID 0180.
+
+```{r}
+mun <- municipality("0180")
+mun$values
+```
+
+This shows the municipality title and type.
+
+## KPI Data by Year
+You can request data for a specific KPI and year.
+Here we fetch KPI N00951 for year 2020:
+
+```{r}
+data <- data_kpi_year("N00951", 2020)
+head(data$values)
+```
+
+
+## Handling Big Queries
+
+Some endpoints allow very large queries.
+You can request thousands of results safely:
+
+```{r}
+big_res <- kpi(per_page = 1000)
+length(big_res$values)
+```
+
+

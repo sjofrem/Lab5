@@ -22,7 +22,7 @@ test_that("kpi() handles a big query with high per_page", {
   res <- kpi(per_page = 1000)
 
   expect_type(res, "list")
-  expect_true(length(res$values) <= 1000)
+  expect_true(length(res$values$id) == 1000)
 })
 
 # test municipality() with a known ID

@@ -2,6 +2,7 @@
 # Lab5
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/sjofrem/Lab5/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/sjofrem/Lab5/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of Lab5 is to be a R wrapper for the Kolada API.

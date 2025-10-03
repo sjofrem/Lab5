@@ -12,7 +12,7 @@ test_that("kpi() returns a Kolada envelope", {
 # test API limit parameter
 test_that("kpi() respects or caps the per_page limit", {
   res <- kpi(per_page = 5)
-  expect_lte(length(res$values), 5000)
+  expect_lte(length(res$values$id), 5)
 })
 
 
